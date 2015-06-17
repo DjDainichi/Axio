@@ -1,0 +1,4004 @@
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CallingStoreProcedure
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var connection = @"Server=DTC97C3E0CEACB3\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;";
+            var selectTop5 = "SelectTop5Album";
+            
+            var line = "";
+            var saveToFile = new StreamWriter("Test.txt");
+            
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                var takeTop5 = new SqlCommand(selectTop5, conn);
+                var reader = takeTop5.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    var dog = (String.Format("{0},{1},{2}", reader[0], reader[1], reader[2]));
+                    //saveToFile.WriteLine(dog);
+                    Console.WriteLine(reader);
+                }
+                saveToFile.Close();
+                conn.Close();
+                var list = new StreamReader("Test.txt");
+                while (line != null)
+                {
+                    line = list.ReadLine();
+                    Console.WriteLine(line);
+                }
+                list.Close();
+
+
+                Console.ReadKey();
+            }
+        }
+    }
+}

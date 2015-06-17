@@ -1,0 +1,71 @@
+In ZLStatHarvester I changed PollingTimeOutInMinutes to PollingTimeOutMinutes
+
+In ADGroupReader I changed PollingInterval to PollingIntervalMinutes
+
+In ADSPublisher I changed Interval to PollingIntervalMinutes
+
+In ADUserReader I changed PollinInterval To PollingIntervalMinutes
+
+In ZLStatHarvester I changed PollingTimeOutInMinutes to PollingTimeOutMinutes
+
+In ADUserReader I changed PollinInterval To PollingIntervalMinutes
+
+In Bloomberg Chat I changed ClaimCheckInterval to PollingIntervalMinutes
+
+In SourceReader I changed PollingInterval to PollingIntervaMinutes
+
+In Lync/ImageRecon I changed PollingInterval to PollingIntervalMinutes.
+
+In Lync/Vantage I changed PolliningInterval to PollingIntervalMinutes.
+
+In BloombergPurger I changed PollingInterval to PollingIntervalMinutes.
+
+In ClaimCheckProcessor I changed PollingInterval to PollingIntervalMinutes.
+
+In ExchangeTokenGenerator in generalConfigurations I changed TimerInterval to TimerIntervalMilliseconds.
+
+In ExchangeTokenGenerator in Polling I changed Interval to PollingIntervalMinutes.
+
+In ExchangeTokenGenerator in Polling I changed Timeout to TimeoutSeconds.
+
+In GarbageCollector I changed RetentionPeriod to RetentionPeriodHours.
+
+In GarbageCollector I changed RunInterval to RunIntervalMinutes.
+
+In HrReader I changed HrReaderPollingInterval to PollingIntervalMinutes.
+
+In Lync/ImageRecon in PurgerConfigurations  I changed ConfigurationRefreshInterval to ConfiurationRefreshSeconds
+
+In Lync/Vantage in PurgerConfigurations  I changed ConfigurationRefreshInterval to ConfiurationRefreshSeconds.
+
+In Normalizer I changed PollingInterval to PollingIntervalMinutes.
+
+In Normalizer I changed TimerInterval to TimerIntervalSeconds.
+
+In Normalizer I changed TimeoutInterval to TimeoutIntervalSeconds.
+
+In Notifications I changed PollingInterval to PollingIntervalMinutes.
+
+In Notifications I changed TimerInterval to TimerIntervalSeconds.
+
+In SourceDataCleanser I changed PollingInterval to PollingIntervalMinutes.
+
+In SourceDataCleanser I changed TimerInterval to TimerIntervalSeconds.
+
+In SouurceReader I changed TimerInterval to TimerIntervalSeconds.
+
+In ValidationScheduler I changed PollingInterval to PollingIntervalMinutes.
+
+In VDSPublisher I changed PollingInterval to PollingIntervalMinutes.
+
+In VDSPublisher I changed TimeOutInterval to TimeoutIntervalSeconds.
+
+In XDSPublisher I changed ReaderInterval to PollingIntervalMinutes.
+
+In XDSPublisher I changed ClaimCheckTimeOut to TimeoutIntervalSeconds.
+
+In XDSPurge I changed PollingInterval to PollingIntervalMinutes.
+
+In ZLExtractService I changed PollingInterval to PollingIntervalMinutes.
+
+In ZLExtractService I changed PollingTimeout to TimeoutIntervalSeconds.

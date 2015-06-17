@@ -1,0 +1,43 @@
+Bob Cheat Sheet ASP.NET Web Applications
+
+CS-ASP_Lesson 003 My First Web Form 6/11/15
+notes:
+- Created a new Web App by default kept it empty
+- Added a web form named 'Default'
+- Added "Server Controls" (Textboxes, Button, Label)
+- Altered the 'Programatic ID' of the Textbox (How we reference and access the Textbox in code)
+- (Properties, ID , pascal case Identifier with discription of intent, purpose, responsibility)
+   ie firstNameTextBox, lastNameTextBox, okButton...etc
+- Button - changed programatic ID, & Text Propertie to display Click Me
+- Lable - changed the programatic ID, & Text Property to display an empty String
+         => this item exists and it has no default text in it. "design time"
+- Double click click Me Button
+- Default.aspx.cs = C# code
+- inside the okButton_Click(object sender, EventArgs e)
+{
+   methods scope 
+}  
+
+
+
+CS-ASP_Lesson 004 Understanding What You Just Did 6/11/15
+
+- Intellisense . (member accessor) shows all the available properties associated with object
+- Relationship between Default.aspx & Default.aspx.cs the code behind "Code that sits behind the actual form" 
+   C# code executes on a server somewhere & the Form is what is DELIVERED / DISPLAYED to a end user.
+- Server Controls - give your web form functionality (ie Login controls, Check boxes, Buttons..etc)
+- Server controls perform a specific  task really well ie TextBox is an input for textual information. end user sends
+   alpha numeric characters to your program
+- Button end user can choose to perform an action , Do something now 
+- Lable is good at displaying  information, end result message our program
+
+- We can see the Methods availabe to a particular object via drop down.
+- when event objects ie Click EXECUTED the Event handler is executed and any business logic you have written will be executed
+
+- Using the Programatic ID we either store or retrieve Alpha numeric characters "String" in variables 'Wired together' so to speak
+- Whenever we need to get back at those string values we can reference them via whatever we have named them
+
+
+
+
+CS-ASP_Lesson 005

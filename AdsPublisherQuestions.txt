@@ -1,0 +1,21 @@
+What does AppDomain.CurrentDomain.BaseDirectory mean? 
+
+What is a domain?
+
+What is Task?
+ 
+What is ServiceBase?
+
+In DateTime what is UTC?
+
+What is CancellationTokenSource?
+
+Line 49 of catch it says that csn not initalize admin service in Reader, should it say AdsPublisher?
+
+line 93 The polling interval is commented out and hardcoated should it be changed?
+
+In the DataLocation class in ADSPublisher What are the UserAliases?
+
+In ADSPublisher Line 134 to 150 What is going on?
+
+IN Jira put a comment about missing info and unclerity about diagrams

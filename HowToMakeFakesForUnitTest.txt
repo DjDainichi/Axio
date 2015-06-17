@@ -1,0 +1,209 @@
+1) determine the dependency yo want to fake
+i.e. the webserviceadapter
+Yarema, Benjamin 11:07 AM
+ok
+Curtis, Charles S. 11:07 AM
+2) if the dependency is a class, but doesnt have an interface, you have to create an interface for it
+so you start by creating a new class, an interface class file
+3) then in the interface, you add a method stub for every PUBLIC method in the class that implements the dependency
+and save it
+4) then you find the original class that implements the dependency, i.e. WenServiceAdapter and you make it implement the interface
+like this in the original class file:
+public class WebServiceAdapter : IWebServiceAdapter
+it should already have all the functions needed to implement the interface because you just modeled the interface from that class
+5) then you create a NEW class. this one also implements th enew interface
+but in the new one, you have to write the code for the functions that implement the interface.
+in those functions, you have to decide what they will return
+if you need a datatable to come back with some data in it, you literally write code to create a datatable and add the data manually
+or you could keep the fake data in a file and load it from there
+making sense?
+Yarema, Benjamin 11:12 AM
+yes
+sounds like a lot of fun but really tedious
+Curtis, Charles S. 11:13 AM
+its not really that bad.
+but that is why i refer Mocks over fakes ... less code to write
+prefer Mocks i mean
+Yarema, Benjamin 11:14 AM
+I saw that in the videos I was watching
+but they also said it is good to sart with fakes so you can apreciate the Mocs
+Curtis, Charles S. 11:15 AM
+yep
+Yarema, Benjamin 11:16 AM
+so when I make the second class that I have to write the code for I do that in the Fakes folder and name the class something like FakeWebServiceAdapter
+Curtis, Charles S. 11:16 AM
+yep
+Yarema, Benjamin 11:16 AM
+ok thracking
+Curtis, Charles S. 11:16 AM
+its really that simple
+and so then there is another part
+Yarema, Benjamin 11:16 AM
+ok?
+Curtis, Charles S. 11:17 AM
+well so 
+what u have to do is take the class that calls the function(S) on the class with the dependency in it
+and either add a new parameter to the constuctor (or create a second or third contructor)
+the new parameter will be for an object of the new type of interface. so you would have something like this
+public AdsPublisherHelper(IWebServiceAdapter webServiceAdapter){
+}
+then in the unit test
+you would do this
+var webServiceAdapter = new FakeWebServiceAdapter(url);
+then this
+var helper = new AdsPublisherHelper(webServiceAdapter);
+those two lines are very powerful
+because you are substituting complete different code for the original code the class used.
+and it gives you the flexibility to do what you need to do
+this concept can be used all over an application not just in unit tests
+for instance if you look at your program.cs file in AdsPublisher you are using it when you pass in the AAfLogger and some of the other paramters
+Yarema, Benjamin 11:24 AM
+ok where did  
+public AdsPublisherHelper(IWebServiceAdapter webServiceAdapter){
+}
+go in the  Fake class
+or do I change the original signiture
+Curtis, Charles S. 11:25 AM
+it doesnt go in the Fake class. it goes in the class that will be using the webserviceadapter. for example the AdsPublisherHelper
+Yarema, Benjamin 11:25 AM
+so the original Ads  PublisherHelper
+Curtis, Charles S. 11:26 AM
+you modify the helper class so it has a constructor that takes the interface parameter
+yeah
+Yarema, Benjamin 11:26 AM
+ok
+Curtis, Charles S. 11:26 AM
+so in the unit test, you instantiate the helper class using that new contructor
+Yarema, Benjamin 11:26 AM
+and because I added the Interface to the original it will not affect the code
+Curtis, Charles S. 11:26 AM
+now you will have access to the methods of the Fake class
+exactly. the code still thinks it is calling that same method it always was
+but its not:)
+Yarema, Benjamin 11:27 AM
+why is it not happy?
+Curtis, Charles S. 11:28 AM
+its happy
+Yarema, Benjamin 11:28 AM
+oh
+Curtis, Charles S. 11:28 AM
+i was just saying "its not" because it's not calling the same method it thinks it is
+the method name is the same and the parameters are the same and the return type is the same. but it is not calling a web service anymore
+Yarema, Benjamin 11:29 AM
+So I am going to make a side branch while I am trying this out so that I know I did not break anything before you check it out
+Curtis, Charles S. 11:30 AM
+so the unit test doesnt have to make a network connection when it runs
+sounds good
+Yarema, Benjamin 11:30 AM
+that is awesome
+so what types of things am I trying to test ?
+all or methoods
+Curtis, Charles S. 11:31 AM
+now i was just giving you the webserviceadapter as an example
+what i really want to use is the webserviceproxy
+Yarema, Benjamin 11:31 AM
+snd the variables that are being returned and given in?
+Curtis, Charles S. 11:31 AM
+i think it has some interfaces already created
+sorry what what the question?
+Yarema, Benjamin 11:33 AM
+So am I testing things returned and the variables are what they are supose to be after the methods are called?
+Curtis, Charles S. 11:33 AM
+yes that is a good start
+Yarema, Benjamin 11:33 AM
+ok
+Curtis, Charles S. 11:34 AM
+make sure the method being tested is not allowing bad arguments for the parameters to be passed in
+and make sure that with the logic it has inside that it returns the correct value
+Curtis, Charles S. 11:37 AM
+take a look at the WebServiceProxies project under the WebServices folder in the Solution explorer. go ahead and get latest so you have the newest code
+Yarema, Benjamin 11:37 AM
+So the Ads and the Vds do not implement this webserviceproxylayer directly?
+Curtis, Charles S. 11:38 AM
+not at the moment. you will see what Will is doing in the WebServiceProxy project with the interfaces and concrete classes in the WebServiceProxies subfolder in the project
+those are all concrete classes in that folder
+that implement interfaces he wrote
+or Ally i think
+each interface is supposed to correspond with a "Resource" like i was talking about earlier
+Will said he already implemented methods in these concrete classes to be used in the  Publisher, but we need to verify that
+if not we will have to add our own ... and we may have to add our own concrete methods to the concrete classes in the proxy
+and to the relevant interface
+Curtis, Charles S. 11:44 AM
+so you should be able to create a new FakeAdsWebServiceAdapter class using the proxy interface called IAdsAdapter and then implement the fake methods you need for testing and just create method stubs for the ones you dont need
+Yarema, Benjamin 11:44 AM
+now there is a AdsWebServiceAdaptor in the webServiceProxies folder
+Curtis, Charles S. 11:45 AM
+that is the concrete class Will made that actually calls a web service
+Yarema, Benjamin 11:45 AM
+ok so i am in the right spot
+Curtis, Charles S. 11:45 AM
+you would create one in the same way but it wouldn't call a web service. it would only return what you wanted
+yes
+and remember that the AdsPublisherHelper still needs to work if you add a new constructor that takes an IAdsAdapter interface parameer
+parameter
+hmm that coould be a problem
+Yarema, Benjamin 11:49 AM
+but doesnt italready use the IAdsAdapter interface Parameter?
+Curtis, Charles S. 11:49 AM
+no
+Curtis, Charles S. 11:52 AM
+well for now i think we just need to start with the AdsPublisher and have the AdsPublisherHelper take an IAdsAdapter parameter
+comment out the constructor that take the WebServiceAdapter.
+then create a global variable:
+private IAdsAdapter _adsAdapter;
+then in the constructor code set it like this:
+_adsAdapter = adsAdapter;
+and the constructor would look like this:
+public AdsPublisherHelper(IAdsAdapter adsAdapter)
+{
+}
+or public AdsPublisherHelper(IAdsAdapter adsAdapter)
+{
+    _adsAdapter = adsAdapter;
+}
+Yarema, Benjamin 11:56 AM
+ok and then make sure it still works?
+Curtis, Charles S. 11:56 AM
+then all the calls to the webservice would call _adsAdapter.DoWhatever()
+yes
+Yarema, Benjamin 11:57 AM
+then start writing code for the fake to return what I need 
+Curtis, Charles S. 11:57 AM
+now just so you know, the whole point of doing this is so the method you are testing doesnt have to call over the network or connect to the database
+once it is setup then you can write unit tests to call the method being tested and see if it returns the correct results
+that way you are only testing the "logic" in the method, not some external call to a webservice which may or may not work
+Yarema, Benjamin 11:59 AM
+but he original AdsCode will work fine cause the WebserviceAdpter is already of the IAdsAdapter
+Curtis, Charles S. 11:59 AM
+i gotta go now. any questions?
+yes exactly
+Yarema, Benjamin 11:59 AM
+ok I think I am good
+Curtis, Charles S. 11:59 AM
+unless it doesnt
+but that is a job for another day. that is called integration testing
+awesome
+Yarema, Benjamin 12:00 PM
+ok have a safe trip I will send you a email as to how I am doing tonight or tomorrow
+Curtis, Charles S. 12:00 PM
+so go ahead and work on your own branch on the AdsPublisher unit tests
+ok. cool.
+Monday will start going full force on this stuff because we have more windows services to redesign and convert
+Yarema, Benjamin 12:01 PM
+with the name of the branch incase you want to check out the code to make sure I am going down the right path
+Curtis, Charles S. 12:01 PM
+and more unit tests to write, he he
+yeah email the branch name to be
+you will need to push it to the server of course
+Yarema, Benjamin 12:02 PM
+all for it I lhave learned more since we have been talking then the couple of hours I watched videos
+bye have a safe trip we have plenty of timre to talk later
+Curtis, Charles S. 12:03 PM
+right well the videos just kind of open your mind to what is possible
+then as you start to talk about it with others and to use it you start to learn 
+thanks you have a good weekend
+Yarema, Benjamin 12:04 PM
+yes sir
+This message was not delivered to Curtis, Charles S. because this person is unavailable or offline. 
+yes sir
+This conversation is saved in the Conversations tab in Lync and in the Conversation History folder in Outlook.
